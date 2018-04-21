@@ -46,7 +46,7 @@ dependencies {
 }
 
 docker {
-    name "${jar.baseName}"
+    name "labcabrera/${jar.baseName}"
     tags 'latest'
     files jar.archivePath
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
