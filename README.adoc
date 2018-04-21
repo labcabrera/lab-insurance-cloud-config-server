@@ -1,5 +1,5 @@
 = lab-insurance-sso
 
-image:https://travis-ci.org/labcabrera/lab-insurance-cloud-config.svg?branch=master["Build Status", link="https://travis-ci.org/labcabrera/lab-insurance-cloud-config"]
+image:https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server.svg?branch=master["Build Status", link="https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server"]
 
 Servidor de configuración de https://github.com/labcabrera/lab-insurance basado en Spring Cloud Config.
