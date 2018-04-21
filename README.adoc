@@ -16,33 +16,36 @@ configuración del siguiente modo:
 curl http://localhost:8888/insurance-common/default/
 ----
 
+Siendo _insurance-common_ el nombre de la configuración que deseamos consultar y _default_ el
+profile.
+
 Si la aplicación está funcionando correctamente debería consultar el repositorio de Github donde
 está alojada nuestra configuración y devolver un JSON con la siguiente estructura:
 
 [source,json]
 ----
 {
-	"name": "insurance-common",
-	"profiles": [
-		"default"
-	],
-	"label": null,
-	"version": "0134c35ce7da5b7253f50d1314810272b57fe8f6",
-	"state": null,
-	"propertySources": [
-		{
-			"name": "https://github.com/labcabrera/lab-insurance-cloud-config/insurance-common.yml",
-			"source": {
-				"configuration.projectName": "insurance-common",
-				"spring.data.mongodb.uri": "mongodb://localhost:27017/lab-insurance",
-				"eureka.registerWithEureka": true,
-				"eureka.fetchRegistry": true,
-				"eureka.client.serviceUrl.defaultZone": "http://lab-insurance-eureka.eu-west-1.elasticbeanstalk.com/eureka/",
-				"management.security.enabled": false,
-				"logging.level.org": "INFO"
-			}
-		}
-	]
+  "name": "insurance-common",
+  "profiles": [
+    "default"
+  ],
+  "label": null,
+  "version": "0134c35ce7da5b7253f50d1314810272b57fe8f6",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/labcabrera/lab-insurance-cloud-config/insurance-common.yml",
+      "source": {
+        "configuration.projectName": "insurance-common",
+        "spring.data.mongodb.uri": "mongodb://localhost:27017/lab-insurance",
+        "eureka.registerWithEureka": true,
+        "eureka.fetchRegistry": true,
+        "eureka.client.serviceUrl.defaultZone": "http://lab-insurance-eureka.eu-west-1.elasticbeanstalk.com/eureka/",
+        "management.security.enabled": false,
+        "logging.level.org": "INFO"
+      }
+    }
+  ]
 }
 ----
 
