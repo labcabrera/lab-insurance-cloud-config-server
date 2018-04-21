@@ -4,7 +4,7 @@ buildscript {
   }
   repositories {
     mavenCentral()
-		maven {
+    maven {
       url "https://plugins.gradle.org/m2/"
     }
   }
@@ -46,7 +46,8 @@ dependencies {
 }
 
 docker {
-    name "${project.group}/${jar.baseName}"
+    name "${jar.baseName}"
+    tags 'latest'
     files jar.archivePath
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
 }
