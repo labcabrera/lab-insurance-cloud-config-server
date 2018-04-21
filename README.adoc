@@ -20,6 +20,19 @@ Y para ejecutar la imagen el comando run de docker:
 $ docker run -p 8888:8888 -t lab-insurance-cloud-config-server
 ---- 
 
+Despues para subir nuestra imagen simplemente crearemos el tag y haremos el push:
+
+----
+$ docker images
+REPOSITORY                          TAG                 IMAGE ID            CREATED              SIZE
+lab-insurance-cloud-config-server   latest              45775fb44fbb        About a minute ago   128MB
+...
+
+$ docker tag 45775fb44fbb labcabrera/lab-insurance-cloud-config-server:1.0.0
+
+$ docker push labcabrera/lab-insurance-cloud-config-server:1.0.0
+----
+
 == Resources
 
 * https://github.com/palantir/gradle-docker
