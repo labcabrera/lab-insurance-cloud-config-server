@@ -17,7 +17,7 @@ Para crear la imagen simplemente ejecutaremos `gradle build docker`.
 Y para ejecutar la imagen el comando run de docker:
 
 ----
-$ docker run -p 8888:8888 -t labcabrera/lab-insurance-cloud-config-server
+$ docker run -i -p 8888:8888 -t labcabrera/lab-insurance-cloud-config-server
 ---- 
 
 Despues para subir nuestra imagen simplemente crearemos el tag y haremos el push:
