@@ -2,10 +2,49 @@
 
 image:https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server.svg?branch=master["Build Status", link="https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server"]
 
-Servidor de configuración de https://github.com/labcabrera/lab-insurance basado en Spring Cloud Config.
+Servidor de configuración de https://github.com/labcabrera/lab-insurance basado en Spring Cloud
+Config.
 
 El repositorio que contiene la configuración es: https://github.com/labcabrera/lab-insurance-cloud-config.
 
+== Consultando la configuración
+
+Una vez ejecutándose la aplicación podemos hacer una petición HTTP para consultar nuestra
+configuración del siguiente modo:
+
+----
+curl http://localhost:8888/insurance-common/default/
+----
+
+Si la aplicación está funcionando correctamente debería consultar el repositorio de Github donde
+está alojada nuestra configuración y devolver un JSON con la siguiente estructura:
+
+[source,json]
+----
+{
+	"name": "insurance-common",
+	"profiles": [
+		"default"
+	],
+	"label": null,
+	"version": "0134c35ce7da5b7253f50d1314810272b57fe8f6",
+	"state": null,
+	"propertySources": [
+		{
+			"name": "https://github.com/labcabrera/lab-insurance-cloud-config/insurance-common.yml",
+			"source": {
+				"configuration.projectName": "insurance-common",
+				"spring.data.mongodb.uri": "mongodb://localhost:27017/lab-insurance",
+				"eureka.registerWithEureka": true,
+				"eureka.fetchRegistry": true,
+				"eureka.client.serviceUrl.defaultZone": "http://lab-insurance-eureka.eu-west-1.elasticbeanstalk.com/eureka/",
+				"management.security.enabled": false,
+				"logging.level.org": "INFO"
+			}
+		}
+	]
+}
+----
 
 == Plugin de Docker
 
