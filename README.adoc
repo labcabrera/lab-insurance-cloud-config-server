@@ -54,9 +54,13 @@ está alojada nuestra configuración y devolver un JSON con la siguiente estruct
 Para crear la imagen docker se utiliza el plugin https://github.com/palantir/gradle-docker[palantir]
 de gradle.
 
-Para crear la imagen simplemente ejecutaremos `gradle build docker`.
+Para crear la imagen simplemente ejecutaremos:
 
-Y para ejecutar la imagen el comando run de docker:
+----
+$ gradle build docker
+----
+
+Y después simplemente tendremos que ejecutar nuestra imagen del modo habitual:
 
 ----
 $ docker run -i -p 8888:8888 -t labcabrera/lab-insurance-cloud-config-server
