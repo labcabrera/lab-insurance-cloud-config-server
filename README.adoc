@@ -5,7 +5,8 @@ image:https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server.svg?bra
 Servidor de configuración de la aplicación https://github.com/labcabrera/lab-insurance[lab-insurance]
 basado en https://cloud.spring.io/spring-cloud-config/[Spring Cloud Config].
 
-El repositorio que contiene la configuración es: https://github.com/labcabrera/lab-insurance-cloud-config.
+El repositorio que contiene la configuración es:
+https://github.com/labcabrera/lab-insurance-cloud-config[lab-insurance-cloud-config].
 
 == Consultando la configuración
 
