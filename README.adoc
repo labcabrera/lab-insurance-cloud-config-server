@@ -2,6 +2,8 @@
 
 image:https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server.svg?branch=master["Build Status", link="https://travis-ci.org/labcabrera/lab-insurance-cloud-config-server"]
 
+== Introducción
+
 Servidor de configuración de la aplicación https://github.com/labcabrera/lab-insurance[lab-insurance]
 basado en https://cloud.spring.io/spring-cloud-config/[Spring Cloud Config].
 
@@ -50,7 +52,9 @@ está alojada nuestra configuración y devolver un JSON con la siguiente estruct
 }
 ----
 
-== Plugin de Docker
+== Docker
+
+Las imágenes están disponibles en https://hub.docker.com/r/labcabrera/lab-insurance-cloud-config-server/.
 
 Para crear la imagen docker se utiliza el plugin https://github.com/palantir/gradle-docker[palantir]
 de gradle.
