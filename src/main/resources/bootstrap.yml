@@ -2,7 +2,7 @@ spring:
   application:
     name: insurance-cloud-config
   profiles:
-    active: local-git
+    active: github
  
 server:
   port: ${PORT:8888}
