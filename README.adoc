@@ -77,6 +77,24 @@ A partir del plugin también podemos hacer el push a https://hub.docker.com/[Doc
 $ gradle dockerPush
 ----
 
+== Instalando la aplicación en Heroku
+
+Para ejecutar la aplicación bastará con hacer:
+
+----
+heroku create config-lab-insurance
+
+git push heroku master
+----
+
+Y cuando termine el proceso será accesible desde:
+
+https://config-lab-insurance.herokuapp.com/insurance-common/default
+
+Más información sobre cómo instalar aplicaciones Spring Boot en Heroku en el siguiente link:
+
+https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku.
+
 == Resources
 
 * https://github.com/palantir/gradle-docker
